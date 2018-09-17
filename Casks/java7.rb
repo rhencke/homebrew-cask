@@ -2,10 +2,7 @@ cask 'java7' do
   version '1.7.0_80'
   sha256 '2b9deef240a7f07d08541da01bbd60cbf93bf713efd5997e586ba23ec4f5089e'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-macosx-x64.dmg',
-      cookies: {
-                 'oraclelicense' => 'accept-securebackup-cookie',
-               }
+  url 'http://kvm-artifactor1.int.kronos.com/ext-installers-local/com/oracle/jdk/jdk-7u80-macosx-x64.dmg'
   name 'Java Standard Edition Development Kit'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html'
 
@@ -53,21 +50,21 @@ cask 'java7' do
                     ],
             rmdir:  '~/Library/Application Support/Oracle/'
 
-  caveats <<-EOS.undent
-    This Cask makes minor modifications to the JRE to prevent any packaged
-    application issues.
+  caveats <<-EOS
+This Cask makes minor modifications to the JRE to prevent any packaged
+application issues.
 
-    If your Java application still asks for JRE installation, you might need to
-    reboot or logout/login.
+If your Java application still asks for JRE installation, you might need to
+reboot or logout/login.
 
-    The JRE packaging bug is discussed here:
+The JRE packaging bug is discussed here:
 
-        https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
+    https://bugs.eclipse.org/bugs/show_bug.cgi?id=411361
 
-    Installing this Cask means you have AGREED to the Oracle Binary Code License
-    Agreement for Java SE at
+Installing this Cask means you have AGREED to the Oracle Binary Code License
+Agreement for Java SE at
 
-        http://www.oracle.com/technetwork/java/javase/terms/license/index.html
+    http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 
-    EOS
+EOS
 end
